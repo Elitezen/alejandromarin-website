@@ -2,6 +2,7 @@ import './App.scss';
 import Header from './components/Header/Header';
 import SidebarNav from './components/Header/Navigation/SidebarNav';
 import AboutMe from './components/AboutMe/AboutMe';
+import ContactMe from './components/ContactMe/ContactMe';
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Header/>
       <SidebarNav/>
       <AboutMe/>
+      <ContactMe/>
     </>
   );
 }

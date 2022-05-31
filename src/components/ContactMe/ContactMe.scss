@@ -1,0 +1,25 @@
+@import '../../App.scss';
+
+address {
+  @include wide-container();
+  @include flex(column);
+  font-style: normal;
+
+  h2 {
+    font-size: 3em;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin: 1em;
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -74,6 +74,8 @@ export default function AboutMe() {
           title="Adobe DreamWeaver 2015"
           id="5yye-4TKV" />
       </div>
+
+      <img id="opened-certification" alt="opened certification" src={Cert_HTMLCSS}/>
     </main>
   )
 }

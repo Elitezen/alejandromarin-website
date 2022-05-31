@@ -12,6 +12,19 @@ $sidebar-width: 300px;
   background-color: #fff;
   transition: 0.2s ease-in-out;
   z-index: 1;
+
+  ul {
+    @include wide-container($margin: 0);
+    position: absolute;
+    top: 0;
+    list-style: none;
+
+    li {
+      margin: 2em 0 2em 0;
+      padding: 1em;
+      font-size: 1.5em;
+    }
+  }
 }
 
 #shadow-wrapper {
