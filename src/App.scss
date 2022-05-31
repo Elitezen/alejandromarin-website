@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Open+Sans:wght@300&family=Poppins:wght@300&family=Rubik&family=Ubuntu:wght@300&display=swap');
+// font-family: 'Mukta', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Ubuntu', sans-serif;
+
+$color-background-lightgray: #fff6f9;
+$color-blue: #0095F0;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin flex
+($dir, $align: center, $justify: space-around) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin wide-container($padding: 2em, $margin: 2em 0 2em 0) {
+  width: 100%;
+  height: fit-content;
+  padding: $padding;
+  margin: $margin;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p, ul li {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h2, h3 {
+  font-family: 'Rubik', sans-serif;
+}
+
+h4, h5, h6, a {
+  font-family: 'Poppins', sans-serif;
+}
+
+span {
+  font-family: 'Mukta', sans-serif;
+}
+
+body {
+  background-color: $color-background-lightgray;
+}
