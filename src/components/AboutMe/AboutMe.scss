@@ -1,62 +1,67 @@
 @import '../../App.scss';
 
-$mobile-breakpoint: map-get($grid-breakpoints, "md") + 175px;
+$mobile-breakpoint: map-get($grid-breakpoints, "md");
 
-main {
-  @include flex(column);
-  @include wide-container();
+#about-me {
+  @include flex(row);
 
-  h2 {
-    font-size: 3em;
-  }
+  #content-container {
+    @include flex(row);
+    @include wide-container($padding: 0.5em);
+    height: fit-content;
 
-  #profile-photo {
-    aspect-ratio: 1 / 1;
-    width: clamp(250px, 25%, 400px);
-    margin-bottom: 2.5em;
-    background-color: #000;
-    border-radius: 100%;
-    border: none;
-
-    img {
-      border: none;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  p {
-    font-weight: bold;
-    font-size: 1.5em;
-    max-width: 70ch;
-    text-align: center;
-    letter-spacing: 0.5px;
-    line-height: 1.5em;
-    margin: 1em;
-  }
-
-  #badges {
-    @include wide-container();
-
-    h3 {
+    div  {
+      padding: 0 1em;
+      max-width: 50%;
+      min-height: 15em;
       text-align: center;
-      margin: 0em 0 1.25em 0;
-      font-size: 2em
-    }
-    
-    ul {
-      text-align: center;
-      list-style: none;
 
-      li {
-        display: inline-block;
-        margin: 0.25em;
+      h2 {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        text-transform: uppercase;
+        padding: 0.5em;
+        white-space: nowrap;
+      }
+    }
+
+    #description {
+      p {
+        font-size: 1.2rem;
+        max-width: 40ch;
+      }
+    }
+
+    #technologies {
+      ul {
+        li {
+          display: inline-block;
+          
+          img {
+            margin: 0.1em 0.1em;
+          }
+        }
       }
     }
   }
 
-  #certifications {
-    margin: 3em 0 3em 0;
-    text-align: center;
+  @media screen and (max-width: $mobile-breakpoint) {
+    #content-container {
+      @include flex(column);
+
+      div {
+        padding: 0;
+        max-width: 75%;
+        padding: 1em;
+
+        &:nth-child(1) {
+          margin-bottom: 2em;
+        }
+
+        h2 {
+          font-size: 1.75rem;
+        }
+      }
+    }
   }
 }

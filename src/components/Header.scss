@@ -1,0 +1,77 @@
+@import '../App.scss';
+
+$mobile-breakpoint-md: map-get($grid-breakpoints, "md") + 100px;
+$mobile-breakpoint-sm: map-get($grid-breakpoints, "sm") - 200px;
+
+header {
+  border-bottom: 2px solid #fff;
+  @include flex(row, $justify: space-between);
+  padding: 2.5em 7em;
+
+  h1, ul li {
+    white-space: nowrap;
+  }
+
+  h1 {
+    font-size: clamp(1.25em, 3vw, 1.75em);
+    font-weight: lighter;
+  }
+
+  nav {
+    ul {
+      @include flex(row);
+      list-style: none;
+
+      li {
+        padding: 0.5em;
+        margin: 0 1em;
+        border: 1.5px solid #fff;
+        border-radius: 3px;
+        transition: 0.2s ease-in-out;
+
+        a {
+          text-decoration: none;
+          color: inherit
+        }
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+          border: 1.5px solid #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-breakpoint-md) {
+    @include flex(column);
+
+    h1 {
+      font-size: clamp(1.5em, 3vw, 2em);
+      font-weight: bold;
+    }
+
+    nav {
+      margin-top: 2em;
+
+      ul {
+        li {
+          background-color: #fff;
+          color: #000;
+          font-weight: bold;
+          letter-spacing: 1px;
+          border: 1.75px solid #fff;
+        }
+
+        @media screen and (max-width: $mobile-breakpoint-sm) {
+          @include flex(column);
+
+          li {
+            margin: 0.25em 0;
+          }
+        }
+      }
+    }
+  }
+}

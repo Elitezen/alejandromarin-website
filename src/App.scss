@@ -42,6 +42,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: rgb(26, 25, 25);
+  color: #fff;
+}
+
 p, ul li {
   font-family: 'Open Sans', sans-serif;
 }
@@ -60,8 +65,4 @@ h4, h5, h6, a {
 
 span {
   font-family: 'Mukta', sans-serif;
-}
-
-body {
-  background-color: $color-background-lightgray;
 }
