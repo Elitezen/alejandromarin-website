@@ -1,0 +1,70 @@
+@import '../../App.scss';
+
+$mobile-breakpoint: map-get($grid-breakpoints, "md");
+
+#certifications {
+  @include flex(column);
+  @include wide-container($padding: 0);
+
+  h2 {
+    font-weight: lighter;
+    font-size: 2rem;
+  }
+
+  #certifications-container {
+    @include wide-container($padding: 0 1em);
+
+    ul {
+      @include flex(row);
+      list-style: none;
+
+      li {
+        text-align: center;
+      }
+    }
+
+    .certification-card {
+      figure {
+        figcaption {
+          padding: 1em;
+          text-align: center;
+          max-width: 40ch;
+        }
+
+        img {
+          width: 25vw;
+          border-radius: 5px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+  
+      p {
+        padding: 1em;
+      }
+    }
+  }
+
+  #opened-certification {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: clamp(500px, 50%, 1000px);
+    z-index: 3;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    #certifications-container ul {
+      @include flex(column);
+
+      .certification-card img {
+        width: 60vw;
+      }
+    }
+  }
+}

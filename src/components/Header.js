@@ -10,7 +10,7 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <a href="#">
+            <a href="#projects">
               My Projects
             </a>
           </li>

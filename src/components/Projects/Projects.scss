@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+#projects {
+  @include flex(column);
+  @include wide-container();
+
+  #project-summary-container {
+    @include flex(row);
+    @include wide-container();
+
+    div {
+      border: 2px solid #fff;
+    }
+  }
+}

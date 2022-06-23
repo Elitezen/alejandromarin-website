@@ -4,7 +4,6 @@ $mobile-breakpoint-md: map-get($grid-breakpoints, "md") + 100px;
 $mobile-breakpoint-sm: map-get($grid-breakpoints, "sm") - 200px;
 
 header {
-  border-bottom: 2px solid #fff;
   @include flex(row, $justify: space-between);
   padding: 2.5em 7em;
 
