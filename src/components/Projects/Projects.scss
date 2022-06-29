@@ -1,15 +1,73 @@
 @import '../../App.scss';
 
+$mobile-breakpoint: map-get($grid-breakpoints, "md");
+
 #projects {
   @include flex(column);
-  @include wide-container();
+
+  h3, h4, p {
+    color: #000;
+  }
 
   #project-summary-container {
-    @include flex(row);
-    @include wide-container();
-
+    text-align: center;
+    
     div {
-      border: 2px solid #fff;
+      @include wide-container($padding: 0);
+      background-color: rgb(243, 234, 234);
+      margin: 0.5em;
+      padding: 2em 0;
+      border-radius: 2px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    
+    ul li {
+      list-style: none;
+      text-align: center;
+      margin: 0 1em;
+
+      .summary {
+        margin: 1em 0;
+      }
+
+      p {
+        margin: 1em 0;
+        max-width: 40ch;
+      }
+
+      button {
+        border: none;
+        border-radius: 3px;
+        padding: 1em;
+        margin: 0.25em;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .visit button {
+        background-color: lightblue;
+      }
+
+      .github button {
+        background-color: darkslategray;
+      }
+
+      .details button {
+        background-color: black;
+      }
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      @include flex(column);
     }
   }
 }

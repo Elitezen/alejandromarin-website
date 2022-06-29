@@ -18,7 +18,7 @@ const technologiesImgUrls = [
 export default function AboutMe() {
   return (
     <>
-      <div id="about-me">
+      <div id="about-me" className="flex-section-row">
         <div id="content-container">
           <div id="description">
             <h2>

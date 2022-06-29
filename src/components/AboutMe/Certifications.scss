@@ -7,7 +7,6 @@ $mobile-breakpoint: map-get($grid-breakpoints, "md");
   @include wide-container($padding: 0);
 
   h2 {
-    font-weight: lighter;
     font-size: 2rem;
   }
 
@@ -28,15 +27,17 @@ $mobile-breakpoint: map-get($grid-breakpoints, "md");
         figcaption {
           padding: 1em;
           text-align: center;
-          max-width: 40ch;
+          max-width: 50ch;
         }
 
         img {
           width: 25vw;
           border-radius: 5px;
+          transition: 0.15s ease-in-out;
 
           &:hover {
             cursor: pointer;
+            transform: scale(1.05);
           }
         }
       }
@@ -62,9 +63,22 @@ $mobile-breakpoint: map-get($grid-breakpoints, "md");
     #certifications-container ul {
       @include flex(column);
 
-      .certification-card img {
-        width: 60vw;
+      .certification-card {
+        margin: 1.5em;
+
+        figcaption {
+          max-width: 40ch;
+          font-size: 1.2rem;
+        }
+
+        img {
+          width: 50vw;
+        }
       }
+    }
+
+    #opened-certification {
+      width: 80vw;
     }
   }
 }

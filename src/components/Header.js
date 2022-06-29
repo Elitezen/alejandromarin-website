@@ -15,7 +15,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#contact">
               Contact Me
             </a>
           </li>

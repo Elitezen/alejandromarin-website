@@ -5,6 +5,7 @@
 // font-family: 'Rubik', sans-serif;
 // font-family: 'Ubuntu', sans-serif;
 
+$color-background-main: rgb(44, 40, 40);
 $color-background-lightgray: #fff6f9;
 $color-blue: #0095F0;
 
@@ -43,12 +44,18 @@ html {
 }
 
 body {
-  background-color: rgb(26, 25, 25);
+  background-color: $color-background-main;
   color: #fff;
 }
 
 p, ul li {
   font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: lighter;
+  text-align: center;
+  padding: 0.75em;
 }
 
 h1 {
@@ -57,7 +64,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  font-weight: lighter;
+  
   text-transform: uppercase;
   padding: 0.5em;
   white-space: nowrap;
@@ -73,6 +80,16 @@ h4, h5, h6, a {
 
 span {
   font-family: 'Mukta', sans-serif;
+}
+
+.flex-section-row {
+  @include flex(row);
+  @include wide-container();
+}
+
+.flex-section-column {
+  @include flex(column);
+  @include wide-container();
 }
 
 #backdrop-wrapper {

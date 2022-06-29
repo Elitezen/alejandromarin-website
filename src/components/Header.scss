@@ -13,7 +13,6 @@ header {
 
   h1 {
     font-size: clamp(1.25em, 3vw, 1.75em);
-    font-weight: lighter;
   }
 
   nav {
@@ -36,7 +35,6 @@ header {
         &:hover {
           background-color: #fff;
           color: #000;
-          border: 1.5px solid #fff;
           cursor: pointer;
         }
       }
