@@ -1,6 +1,6 @@
 @import '../../App.scss';
 
-$mobile-breakpoint: map-get($grid-breakpoints, "md");
+$mobile-breakpoint: map-get($grid-breakpoints, "md") + 100px;
 
 #about-me {
   #content-container {
@@ -29,6 +29,13 @@ $mobile-breakpoint: map-get($grid-breakpoints, "md");
     }
 
     #technologies {
+      .lists {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+      }
+
       ul {
         li {
           display: inline-block;
@@ -43,6 +50,10 @@ $mobile-breakpoint: map-get($grid-breakpoints, "md");
 
   @media screen and (max-width: $mobile-breakpoint) {
     #content-container {
+      #technologies .lists {
+        @include flex(column);
+      }
+
       @include flex(column);
 
       div {

@@ -14,11 +14,6 @@ export default function Header() {
               My Projects
             </a>
           </li>
-          <li>
-            <a href="#contact">
-              Contact Me
-            </a>
-          </li>
         </ul>
       </nav>
     </header>

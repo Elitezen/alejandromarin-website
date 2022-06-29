@@ -14,7 +14,7 @@ $mobile-breakpoint: map-get($grid-breakpoints, "md");
     
     div {
       @include wide-container($padding: 0);
-      background-color: rgb(243, 234, 234);
+      background-color: #fff;
       margin: 0.5em;
       padding: 2em 0;
       border-radius: 2px;
@@ -46,23 +46,18 @@ $mobile-breakpoint: map-get($grid-breakpoints, "md");
         border: none;
         border-radius: 3px;
         padding: 1em;
-        margin: 0.25em;
+        margin: 0.3em;
+        color: #fff;
+        background-color: #000;
+        border: 1px solid #fff;
+        transition: 0.15s ease-in-out;
 
         &:hover {
           cursor: pointer;
+          color: #000;
+          background-color: #fff;
+          border: 1px solid #000;
         }
-      }
-
-      .visit button {
-        background-color: lightblue;
-      }
-
-      .github button {
-        background-color: darkslategray;
-      }
-
-      .details button {
-        background-color: black;
       }
     }
 

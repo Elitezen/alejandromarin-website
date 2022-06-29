@@ -21,9 +21,9 @@ export default function App() {
       <div id="backdrop-wrapper" onClick={() => closePopups()}></div>
       <Stars />
       <Header />
+      <ContactMe />
       <AboutMe />
       <Projects />
-      <ContactMe />
     </>
   );
 }
