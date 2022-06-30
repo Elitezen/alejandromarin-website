@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/alejandromarin-website/static/css/main.12052fc4.css",
+    "main.js": "/alejandromarin-website/static/js/main.be3452c8.js",
+    "static/media/cert_adobedreamweaver.png": "/alejandromarin-website/static/media/cert_adobedreamweaver.a609db122437b134fea9.png",
+    "static/media/cert_htmlcss.png": "/alejandromarin-website/static/media/cert_htmlcss.4650a4934593b51af462.png",
+    "static/media/cert_javascript.png": "/alejandromarin-website/static/media/cert_javascript.acf50be1d814d62a46a0.png",
+    "index.html": "/alejandromarin-website/index.html",
+    "main.12052fc4.css.map": "/alejandromarin-website/static/css/main.12052fc4.css.map",
+    "main.be3452c8.js.map": "/alejandromarin-website/static/js/main.be3452c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12052fc4.css",
+    "static/js/main.be3452c8.js"
+  ]
+}
